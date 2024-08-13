@@ -83,4 +83,11 @@ body {
         padding: 35px;
         margin : 3px
     }
+    .hero::before{
+        background-image: url(img/head2.jpg);
+        z-index: -1;
+        background-size: cover; /* Ensures the image covers the entire header, even if it has to zoom */
+        background-position: center; /* Centers the image within the header */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+    }
 }
