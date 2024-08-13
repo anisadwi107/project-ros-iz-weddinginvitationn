@@ -77,10 +77,10 @@ body {
 /* mobile phone */
 @media(max-width:576px){
     html{
-        font-size:25%;
+        font-size:35%;
     }
     .simply-countdown>.simply-section{
-        padding: 15px;
+        padding: 20px;
         margin : 3px
     }
 }
