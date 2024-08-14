@@ -213,6 +213,10 @@ body {
     .mynavbar .nav-link{
         font-size: 2rem;
         text-align: center;
+        margin: 5px;
+    }
+    .sticky-top{
+        overflow:hidden;
     }
 }
 /* mobile phone */
