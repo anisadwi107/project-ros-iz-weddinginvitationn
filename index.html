@@ -167,5 +167,18 @@
             },       
         });
     </script>
+
+    <script>
+      const stickyTop = document.querySelector('.sticky-top');
+      const Offcanvas = document.querySelector('.offcanvas');
+
+      Offcanvas.addEventListener('show.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'visible';
+      });
+
+      Offcanvas.addEventListener('hidden.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'hidden';
+      });
+    </script>
   </body>
 </html>
