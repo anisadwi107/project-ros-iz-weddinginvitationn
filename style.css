@@ -178,7 +178,7 @@ body {
     font-size: 0.9rem;
 }
 
-.story, .gallery, .rsvp, .gifts{
+.story, .rsvp{
     padding-top: 10rem;
     padding-bottom: 8rem;
 }
@@ -287,6 +287,8 @@ body {
 
 .gallery{
     background-color: #9ce8ee;
+    padding-top: 9rem;
+    padding-bottom: 8rem;
 }
 
 .rsvp{
@@ -311,6 +313,11 @@ body {
     color: var(--dtq);
     border: 1px solid white;
 }
+.gifts{
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+}
+
 footer{
     padding:3rem;
     background-color: var(--tq);
