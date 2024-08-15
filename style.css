@@ -412,10 +412,10 @@ footer a{
         background-position: center; /* Centers the image within the header */
         background-repeat: no-repeat; /* Prevents the image from repeating */
     }
-    .mynavbar.offcanvas{
+    .offcanvas{
         max-width: 80%;
     }
-    .mynavbar .nav-link, .mynavbar.offcanvas-title{
+    .nav-link, .offcanvas-title{
         font-size: 80%;
     }
     .timeline li .timeline-image{
