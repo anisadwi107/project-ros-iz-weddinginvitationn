@@ -413,7 +413,7 @@ footer a{
         background-repeat: no-repeat; /* Prevents the image from repeating */
     }
     .offcanvas{
-        max-width: 80%;
+        max-width: 250px;
     }
     .nav-link, .offcanvas-title{
         font-size: 80%;
