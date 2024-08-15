@@ -414,7 +414,7 @@ footer a{
         background-repeat: no-repeat; /* Prevents the image from repeating */
     }
     .offcanvas{
-        width: 80%;
+        max-width: 80%;
     }
     .timeline li .timeline-image{
         width: 100px;
