@@ -78,7 +78,7 @@ body {
     padding-bottom: 5rem;
 }
 
-.home h2{
+.home h2, .story h2, .gallery h2, .rsvp h2, .gifts h2{
     font-size: 5rem;
     font-family: 'Sacramento', cursive;
     font-weight: bold;
@@ -178,6 +178,150 @@ body {
     font-size: 0.9rem;
 }
 
+.story, .gallery, .rsvp, .gifts{
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.story span, .gallery span, .gifts span{
+    text-transform: uppercase;
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display:block;
+    margin-bottom: 1rem;
+}
+
+.story p, .gallery p, .rsvp p, .gifts p{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.timeline{
+    list-style: none;
+    padding: 1.4rem 0;
+    margin-top: 1rem;
+    position: relative;
+}
+.timeline::before{
+    content:'';
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 1px;
+    background-color: #ccc;
+    left: 50%;
+}
+
+.timeline li{
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+.timeline li::before,
+.timeline li::after{
+    content:'';
+    display:table;
+}
+.timeline li::after{
+    clear:both;
+}
+.timeline li .timeline-image{
+    width: 160px;
+    height: 160px;
+    background-color: #ccc;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+.timeline li .timeline-panel{
+    width: 40%;
+    float: left;
+    border:1px solid #ccc;
+    padding: 2rem;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.timeline li .timeline-panel::before{
+    content:'';
+    display: inline-block;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    right:-15px;
+    top:60px;
+}
+.timeline li .timeline-panel::after{
+    content:'';
+    display: inline-block;
+    position: absolute;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    right:-13px;
+    top:61px;
+}
+.timeline li.timeline-inverted .timeline-panel{
+    width: 40%;
+    float: right;
+}
+.timeline li.timeline-inverted .timeline-panel::before{
+    border-left-width: 0;
+    border-right-width: 15px;
+    left:-15px;
+    right:auto;
+}
+.timeline li.timeline-inverted .timeline-panel::after{
+    border-left-width: 0;
+    border-right-width: 14px;
+    left:-14px;
+    right:auto;
+}
+
+.gallery{
+    background-color: #9ce8ee;
+}
+
+.rsvp{
+    background-color: #000c0d;
+}
+.rsvp h2{
+    font-size: 4.5rem;
+}
+.rsvp p{
+    color: white;
+}
+.rsvp form label{
+    color: white;
+}
+.rsvp button{
+    background-color: var(--dtq);
+    color: white;
+    border: 1px solid var(--dtq);
+}
+.rsvp button:hover{
+    background-color: white;
+    color: var(--dtq);
+    border: 1px solid white;
+}
+footer{
+    padding:3rem;
+    background-color: var(--tq);
+    color: white;
+}
+footer a{
+    color: #000c0d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 /* Media Query */
 /* Xtra large */
 @media(max-width:1200px){
@@ -196,6 +340,29 @@ body {
     }
     .home .heart{
        display:none;
+    }
+    .timeline::before{
+        left:60px;
+    }
+    .timeline li .timeline-image{
+        left:15px;
+        margin-left: 45px ;
+    }
+    .timeline li .timeline-panel, .timeline li.timeline-inverted .timeline-panel{
+        width: calc((100% - 200px));
+        float: right;
+    }
+    .timeline li .timeline-panel::before{
+        border-left-width: 0;
+        border-right-width: 15px;
+        left:-15px;
+        right: auto;
+    }
+    .timeline li .timeline-panel::after{
+        border-left-width: 0;
+        border-right-width: 14px;
+        left:-13px;
+        right: auto;
     }
 }
 /* tablet */
@@ -218,6 +385,10 @@ body {
     .sticky-top{
         overflow:hidden;
     }
+    .timeline li .timeline-image{
+        width: 140px;
+        height: 140px;
+    }
 }
 /* mobile phone */
 @media(max-width:576px){
@@ -235,4 +406,19 @@ body {
         background-position: center; /* Centers the image within the header */
         background-repeat: no-repeat; /* Prevents the image from repeating */
     }
+    .timeline li .timeline-image{
+        width: 100px;
+        height: 100px;
+    }
+    .timeline li .timeline-panel, .timeline li.timeline-inverted .timeline-panel{
+        width: 65%;
+        transform: translateX(-20px);
+    }
+    .timeline li .timeline-panel::before{
+        top:30px;
+    }
+    .timeline li .timeline-panel::after{
+        top:31px;
+    }
+
 }
