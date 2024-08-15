@@ -417,8 +417,8 @@ footer a{
         max-width: 80%;
     }
     .timeline li .timeline-image{
-        width: 100px;
-        height: 100px;
+        width: 80x;
+        height: 80px;
     }
     .timeline li .timeline-panel, .timeline li.timeline-inverted .timeline-panel{
         width: 65%;
