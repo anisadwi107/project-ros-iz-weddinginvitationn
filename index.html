@@ -413,6 +413,13 @@
         });
       });
     </script>
+  
+    <script>
+      document.getElementById('offcanvasNavbar').addEventListener('hidden.bs.offcanvas', function () {
+        this.style.right = '0';
+        this.style.left = 'auto';
+      });
+    </script>
 
 
   </body>
