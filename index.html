@@ -22,7 +22,8 @@
   <body>
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
       <main>
-        <h4> Kepada Bapak/Ibu/Saudara/i, ini hanya headcanon</h4>
+        <h5> Ini hanya headcanon</h5>
+        <h4> Kepada <span></span></h4>
         <h1> Izham & Rosella </h1>
         <p> Akan melangsungkan resepsi pernikahan dalam:</p>
         <div class="simply-countdown"></div>
@@ -104,6 +105,7 @@
           <div class="col-md-8 col-10 text-center">
             <h2>Informasi Acara</h2>
             <p class="alamat">Alamat : Kampung Durian Runtuh, Kota Kayangan, Malaysia Bayangan</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3977.5805608968867!2d100.371254!3d4.488726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwMjknMTkuNCJOIDEwMMKwMjInMTYuNSJF!5e0!3m2!1sid!2sid!4v1723790436752!5m2!1sid!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <a href="https://maps.app.goo.gl/Mu85Avy52cLeLtUu8" target="_blank" class="btn btn-light btn-sm">Klik untuk membuka peta</a>
             <p class="description">Coba cari saja di internet, tidak akan ada. Karena ini hanya headcanon dari shipper Ros dan Iz. Maps hanya menunjukan titik acak. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
           </div>
@@ -270,6 +272,7 @@
             <p>Harap isi form di bawah ini untuk melakukan konfirmasi kehadiran</p>
           </div>
         </div>
+
         <form class="row row-cols-lg-auto g-3 align-items-center justify-content-center"  
         method="POST" 
         action="https://script.google.com/macros/s/AKfycbzIlk0gFea92oKuZs2rUlRBEqe2Z2Svs_G2YZ-nappwF5K7CPatP2YWsyTiqoK-tTs8/exec"
@@ -299,6 +302,32 @@
           <div class="col-12" style="margin-top:30px;">
             <button class="btn btn-primary">Kirim</button>
           </div>
+        </form>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6">
+            <div id="disqus_thread"></div>
+            <script>
+              /**
+              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+              /*
+              var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+              */
+              (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://ros-iz-wedding.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
+        </div>
+
     </section>
 
     <section id="gifts" class="gifts">
@@ -307,7 +336,7 @@
           <div class="col-md-8 col-10 text-center">
             <span>Ungkapan tanda kasih</span>
             <h2>Kirim Hadiah</h2>
-            <p>“Always give without remembering and always receive without forgetting.</p>
+            <p>“Always give without remembering and always receive without forgetting."</p>
           </div>
         </div>
 
@@ -322,9 +351,11 @@
                 <div class="fw-bold">Hong Leong Islamic Bank</div>
                 8765876313 - JEANNE ROSELLA FADILLAH
               </li>
-              <li class="list-group-item">
+              <li class="qr-github list-group-item">
                 <div class="fw-bold">GITHUB</div>
-                <img src="img/qr.png" alt="Link ros-iz html" class="img-thumbnail" width="150">
+                <a href="https://github.com/anisadwi107" target="_blank">
+                  <img src="img/qr.png" alt="Link ros-iz html" class="img-thumbnail" width="150">
+                </a>
               </li>
             </ul>
           </div>
@@ -332,6 +363,24 @@
       </div>
     </section>
 
+    <!-- <section id="congratulations" class="congratulations">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2>Congratulations Board</h2>
+            <p>Leave your congratulatory message below:</p>
+            <textarea id="congratulationInput" class="form-control" rows="3" placeholder="Write your message..."></textarea>
+            <button id="submitBtn" class="btn btn-primary mt-3">Submit</button>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-8">
+            <div id="messagesContainer" class="messages-container"></div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    
     <footer>
       <div class="container">
         <div class="row">
@@ -343,6 +392,16 @@
         </div>
       </div>
     </footer>
+
+    <div id="audio-container">
+      <audio id="bgm" autoplay loop>
+        <source src="audio/birds-in-the-garden-sounds.mp3" type="audio/mp3">
+      </audio>
+
+      <div class="audio-icon-wrapper" style="display:none">
+        <i class="bi bi-disc"></i>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
@@ -378,6 +437,11 @@
 
     <script>
       const rootElement=document.querySelector(':root');
+      const audioIconWrapper=document.querySelector('.audio-icon-wrapper');
+      const audioIcon=document.querySelector('.audio-icon-wrapper i')
+      const bgm= document.querySelector('#bgm');
+      let isPlaying=false;
+
       function disableScroll(){
         scrollTop=window.pageYOffset || document.documentElement.scrollTop;
         scrollLeft=window.pageXOffset || document.documentElement.scrollLeft;
@@ -389,11 +453,34 @@
       function enableScroll(){
         window.onscroll=function(){}
         rootElement.style.scrollBehavior='smooth';
-        localStorage.setItem('opened','true');
+        // localStorage.setItem('opened','true');
+        playAudio()
       }
-      if(!localStorage.getItem('opened')){
-        enableScroll()
+
+      function playAudio(){
+        bgm.volume=1;
+        audioIconWrapper.style.display='flex';
+        bgm.play();
+        isPlaying=true;
       }
+
+      audioIconWrapper.onclick=function(){
+        if (isPlaying){
+          bgm.pause();
+          audioIcon.classList.remove('bi-disc');
+          audioIcon.classList.add('bi-pause-circle');
+          audioIconWrapper.classList.add('paused');
+        } else{
+          bgm.play();
+          audioIcon.classList.remove('bi-pause-circle');
+          audioIcon.classList.add('bi-disc');
+          audioIconWrapper.classList.remove('paused');
+        }
+        isPlaying=!isPlaying;
+      }
+      // if(!localStorage.getItem('opened')){
+      //   enableScroll()
+      // }
       disableScroll()
     </script>
 
@@ -414,7 +501,39 @@
         });
       });
     </script>
-  
 
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get('n') || '';
+      const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+      
+      const namaContainer=document.querySelector('.hero h4 span');
+      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+      document.querySelector('#nama').value=nama;
+    </script>
+
+    <!-- <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const input = document.getElementById('congratulationInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const messagesContainer = document.getElementById('messagesContainer');
+
+        submitBtn.addEventListener('click', function() {
+          const message = input.value.trim();
+
+          if (message !== '') {
+            const messageItem = document.createElement('div');
+            messageItem.classList.add('message-item');
+            messageItem.textContent = message;
+
+            messagesContainer.appendChild(messageItem);
+
+            // Clear the input field after submission
+            input.value = '';
+          }
+        });
+      });
+
+    </script> -->
   </body>
 </html>
