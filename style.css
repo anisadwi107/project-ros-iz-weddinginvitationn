@@ -34,10 +34,19 @@ body {
     font-size:6rem;
     color: var(--dtq);
 }
+.hero h5{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: rgba(9, 110, 117, 0.5);
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
 
+}
 .hero h4 {
     font-size:1.6rem;
     color: var(--dtq);
+    margin-bottom: 0.5rem;
 }
 
 .hero p {
@@ -318,7 +327,64 @@ body {
     padding-top: 9rem;
     padding-bottom: 8rem;
 }
+.qr-github a img {
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+    border:none;
+    margin-bottom: 2rem;
+}
 
+.qr-github a img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* .congratulations {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .congratulations h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  #congratulationInput {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  #submitBtn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+  
+  .messages-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .message-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .message-item:last-child {
+    border-bottom: none;
+  } */
+  
 footer{
     padding:3rem;
     background-color: var(--tq);
@@ -330,6 +396,36 @@ footer a{
     text-decoration: none;
 }
 
+.audio-icon-wrapper{
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom:2.5rem;
+    right:2rem;
+    cursor: pointer;
+    color: rgb(12, 148, 153);
+    opacity: 0.7;
+    /* mix-blend-mode: difference; */
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    line-height: 0;
+}
+.audio-icon-wrapper.paused {
+    animation: none;
+}  
+
+@keyframes rotating{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 /* Media Query */
 /* Xtra large */
 @media(max-width:1200px){
@@ -416,7 +512,7 @@ footer a{
     .offcanvas-end{
         max-width: 80vw;
         right: 0 !important;
-        left:auto !important;
+        left: auto !important;
         display:flex;
         justify-content: flex-end;
     }
@@ -442,5 +538,29 @@ footer a{
     .timeline li .timeline-panel::after{
         top:31px;
     }
-
+}
+@media(max-width:320px){
+    html{
+        font-size:50%;
+    }
+    .simply-countdown>.simply-section{
+        padding: 25px;
+        margin : 3px
+    }
+    .timeline li .timeline-image{
+        width: 75px;
+        height: 75px;
+        left:15px;
+        margin-left: 35px ;
+    }
+    .timeline li .timeline-panel, .timeline li.timeline-inverted .timeline-panel{
+        width: 60%;
+        transform: translateX(-20px);
+    }
+    .timeline li .timeline-panel::before{
+        top:30px;
+    }
+    .timeline li .timeline-panel::after{
+        top:31px;
+    }
 }
