@@ -511,10 +511,12 @@ footer a{
     }
     .offcanvas-end{
         max-width: 80vw;
+        position:fixed;
         right: 0 !important;
         left: auto !important;
         display:flex;
         justify-content: flex-end;
+        overflow-y: auto;
     }
     .nav-link, .offcanvas-title{
         font-size: 80%;
