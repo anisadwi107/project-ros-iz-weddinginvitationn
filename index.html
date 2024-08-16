@@ -21,6 +21,10 @@
   </head>
   <body>
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+      <div class="par-sect"> 
+        <div class="iz-l"></div>
+        <div class="ros-r"></div>
+      </div>
       <main>
         <h5> Ini hanya headcanon</h5>
         <h4> Kepada <span></span></h4>
@@ -485,6 +489,17 @@
     </script>
 
     <script>
+      const parSect=document.querySelector('.par-sect')
+      if(parSect.style.display='flex'){
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.pageYOffset;
+    
+        document.querySelector('.iz-l').style.transform = `translateX(-${scrollPosition * 0.2}px)`; // Move left image leftwards
+        document.querySelector('.ros-r').style.transform = `translateX(${scrollPosition * 0.2}px)`;  // Move right image rightwards
+      });}
+    </script>
+
+    <script>
       window.addEventListener("load", function() {
         const form = document.getElementById('my-form');
         form.addEventListener("submit", function(e) {
@@ -511,6 +526,7 @@
       namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
       document.querySelector('#nama').value=nama;
     </script>
+
 
     <!-- <script>
       document.addEventListener('DOMContentLoaded', function() {
